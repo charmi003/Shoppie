@@ -1,0 +1,17 @@
+<header>
+
+    <h2>Shoppie</h2>
+
+    <div class="header-links">
+        <a href="/">Home</a>
+        <% if(locals.user){ %>
+            <a href="/cart/">Shopping cart</a>
+            <a href="/users/sign-out">Sign out</a>
+        <% }else{ %>
+            <a href="/users/sign-in">Sign In</a>
+        <% } %>
+    </div>
+
+</header>
+
+

@@ -1,0 +1,35 @@
+.order-item{
+    padding:8px 5px;
+
+    input[name='Quantity']{
+        width:55px;
+        border:none;
+    }
+
+}
+.order-item,.totals
+{
+    display:flex;
+    justify-content: space-around;
+    align-items:center;
+    border-bottom:1px solid darkslategray;
+    width:60%;
+    margin:auto;
+}
+.totals{
+    align-items:center;
+    border:none;
+    padding-top:20px;
+    span
+    {
+        font-weight:bold;
+        font-size:21px;
+    }
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {  
+
+   opacity: 1;
+
+}

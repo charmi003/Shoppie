@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="css/home.css">
+
+<div id="products-container">
+
+    <% products.forEach(function(prod){ %>
+
+        <div class="card">
+            <img src="<%= prod.Image %>" class="card-img-top" alt="..." height="250px">
+            <div class="card-body">
+            <h5 class="card-title"><%= prod.Name %></h5>
+            <p class="card-text"><%= prod.Description%></p>
+            <a href="/cart/add-item/?product=<%= prod._id %>" class="btn btn-primary add-item-link">Add to cart</a>
+            <span>Rs.<%= prod.Price %></span>
+            </div>
+        </div>
+
+    <% }) %>
+
+</div>
+

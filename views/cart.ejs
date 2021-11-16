@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="css/cart.css">
+
+<% if(locals.user.Orders.length==0){ %>
+    <h4>Your cart is empty</h4>
+<% }else{
+
+    var total_price=0;
+    locals.user.Orders.forEach(function(order){ total_price+=order.Quantity*order.Product.Price; %>
+
+        <div class="order-item">
+            <span><%= order.Product.Name %></span>
+            <span>Rs.<%= order.Product.Price %></span>
+            X<input type="number" name="Quantity" value="<%= order.Quantity %>" min="1">
+            <span style="font-weight:bold">Rs.<%= order.Quantity*order.Product.Price %></span>
+            <input type="hidden" name="Order_id" value=<%= order._id %>>
+            <a href="/cart/remove-item/?order=<%= order._id %>" class="remove-item-link"><i class="far fa-times-circle remove-item-link" href="/cart/remove-item/?order=<%= order._id %>"></i></a>
+        </div>
+
+    <% }) %>
+
+    <div class="totals">
+        <span>Total:- Rs.<%= total_price %></span>
+        <button id="rzp-button">Pay Now</button>
+    </div>
+
+    <input type="hidden" name="total-amount" value=<%= total_price %>>
+
+
+    <!-- payment -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="js/payment.js"></script>
+
+<% } %>
+
+
+
+

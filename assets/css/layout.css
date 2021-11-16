@@ -1,0 +1,49 @@
+header {
+  height: 11vh;
+  background: #0c0c20;
+  color: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  margin-bottom: 8px;
+}
+
+header a {
+  color: rgba(255, 255, 255, 0.86);
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px;
+  font-size: 20px;
+}
+
+header a:hover {
+  color: white;
+}
+
+/*Styles for the password and confirm password fields*/
+.p {
+  display: flex;
+  border: 1px solid grey;
+  width: 250px;
+  align-items: center;
+}
+
+input[name$="assword"] {
+  border: none;
+}
+
+input[name$="assword"]:focus {
+  outline-width: 0;
+}
+
+.fa-eye-slash, .fa-eye {
+  color: grey;
+  cursor: pointer;
+  display: none;
+}
+
+.fa-eye-slash {
+  display: initial;
+}
+/*# sourceMappingURL=layout.css.map */
